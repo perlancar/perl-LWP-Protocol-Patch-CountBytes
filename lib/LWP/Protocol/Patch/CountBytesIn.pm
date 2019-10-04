@@ -1,4 +1,4 @@
-package LWP::Protocol::Patch::CountBytes;
+package LWP::Protocol::Patch::CountBytesIn;
 
 # DATE
 # VERSION
@@ -60,18 +60,16 @@ sub patch_data {
     };
 }
 
-END { say "total bytes in: $bytes_in" }
-
 1;
 # ABSTRACT: Count bytes in
 
 =head1 SYNOPSIS
 
- use LWP::Protocol::Patch::CountBytes;
+ use LWP::Protocol::Patch::CountBytesIn;
 
  # ... use LWP
 
- printf "bytes in : %9d\n", $LWP::Protocol::Patch::CountBytes::bytes_in;
+ printf "Total downloaded : %9d bytes\n", $LWP::Protocol::Patch::CountBytesIn::bytes_in;
 
 
 =head1 DESCRIPTION
